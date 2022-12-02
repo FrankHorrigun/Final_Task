@@ -4,7 +4,7 @@ int GetArrayLength(string message)
 {
     Console.WriteLine(message);
     int value;
-    while (!int.TryParse(Console.ReadLine(), out value) ^ value <= 0)
+    while (!int.TryParse(Console.ReadLine(), out value) && value <= 0)
     {
         Console.WriteLine("Введите число больше нуля ");
         Console.WriteLine(message);
@@ -83,5 +83,6 @@ string[] resultArray = CreateResultArray(stringArray);
 if (count != 0)
 {
     PrintArray(resultArray);
+    Console.WriteLine();
 }
 else Console.WriteLine("Элементы длиной не более трех отсутствуют");
